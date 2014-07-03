@@ -8,7 +8,7 @@ tell application "Finder"
   set myReply to button returned of (display dialog dialogText buttons {cancelText, okText} cancel button cancelText default button okText)
 end tell
 EOT`
-if [[ $button = "OK" ]]; then 
+if [[ $button = "OK" ]]; then
   echo "Generating code coverage report"
   ${SRCROOT}/XcodeCoverage/getcov
 fi
